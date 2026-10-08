@@ -18,8 +18,10 @@ points at the repository that owns it, and its footer names the revision it was
 rendered from.
 
 The rules a change follows are pages of the
-[specification](https://github.com/lemonfiber/spec), under `50-governance/`, and
-the landing page links them there rather than copying them here.
+[specification](https://github.com/lemonfiber/spec), under `50-governance/`. The
+landing page links each one where the frontpage renders it,
+[lemonfiber.app/spec/](https://lemonfiber.app/spec/), rather than copying it here
+(REPO-R70).
 
 The machinery — mirroring, link rewriting, the guards, the link check, the pin
 checks and the pull request that moves the pins, the accessibility sweep — is
