@@ -435,7 +435,7 @@ jobs:
   notify:
     needs: telling
     if: always() && needs.telling.outputs.red == 'true'
-    uses: lemonfiber/spec/.github/workflows/discord-notify.yml@c26ed83df4ecfeb0b1a2d4e565011605b67c648b # v1.0.38
+    uses: lemonfiber/spec/.github/workflows/discord-notify.yml@477a2b071e4c41ce5527090d86da8106d01dba94 # v1.0.42
     with:
       title: "📌 pins · ${{ github.event.repository.name }}"
       body: ${{ needs.telling.outputs.body }}
