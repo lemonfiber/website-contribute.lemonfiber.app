@@ -1,0 +1,31 @@
+dist/
+node_modules/
+.astro/
+src/paraglide/
+vendor/
+
+# Written by inlang, not by hand.
+project.inlang/
+
+# Shared verbatim with the other lemonfiber repos. Byte-identity is the point —
+# reformatting them here would fork a file that is meant to have one home.
+.markdownlint.jsonc
+.github/labeler.yml
+
+# Mirrored trees. The bytes belong to another repository; formatting them here
+# would rewrite files this repository does not own.
+src/content/docs/architecture/
+src/content/docs/brand/
+src/content/docs/community/how-change-gets-in.md
+src/content/docs/community/conduct.md
+src/content/docs/community/reporting-a-vulnerability.md
+src/content/docs/community/where-to-ask.md
+src/content/docs/repos/lemonfiber.md
+src/content/docs/repos/media-stack.md
+src/content/docs/repos/sdk-ts.md
+src/content/docs/repos/sdk-php.md
+src/content/docs/repos/sdk-python.md
+src/content/docs/repos/web.md
+src/content/docs/repos/companion.md
+src/content/docs/repos/brand.md
+src/content/docs/repos/homebrew-tap.md

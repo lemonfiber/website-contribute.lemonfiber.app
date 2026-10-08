@@ -1,0 +1,11 @@
+{
+  "$schema": "https://inlang.com/schema/inlang-message-format",
+  "nav_start": "Start here",
+  "nav_community": "Taking part",
+  "nav_architecture": "How the core is built",
+  "nav_repos": "The repositories",
+  "nav_brand": "The brand",
+  "mirror_stamp": "Rendered from {repo} at {revision}, {date}.",
+  "mirror_source": "Read the source of this page",
+  "mirror_heading": "This page lives in another repository"
+}

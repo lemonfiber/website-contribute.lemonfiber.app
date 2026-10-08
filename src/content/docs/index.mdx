@@ -1,0 +1,57 @@
+---
+title: Changing lemonfiber
+description: How lemonfiber is built and run, for a person or an agent changing the code.
+---
+
+import { CardGrid, LinkCard } from "@astrojs/starlight/components";
+
+This site is for changing lemonfiber: how a change gets in, how each repository
+is built, and how the core is put together. Running lemonfiber, or building on
+its API, is on [the documentation site](https://docs.lemonfiber.app).
+
+Every page here belongs to the repository that holds what it describes, and
+says at its foot which revision it was rendered from.
+
+## The one rule
+
+Every change cites a requirement in the
+[specification](https://github.com/lemonfiber/spec), and that requirement
+already exists. A pull request whose `Spec:` line names an identifier the
+specification does not hold is closed by `spec-check`. The rules a change
+follows are specification pages:
+
+- [Contributing](https://github.com/lemonfiber/spec/blob/main/50-governance/contributing.md):
+  the rule, finding the identifier to cite, and what a commit message carries
+- [Working in the repositories](https://github.com/lemonfiber/spec/blob/main/50-governance/working-in-the-repositories.md):
+  claiming work, commits, opening and owning a pull request
+- [Working with AI agents](https://github.com/lemonfiber/spec/blob/main/50-governance/ai-contributors.md):
+  the five rules an agent keeps, and what it reads first
+- [The RFC process](https://github.com/lemonfiber/spec/blob/main/50-governance/rfc-process.md):
+  how a change the specification does not hold yet is proposed
+- [Where an issue goes](https://github.com/lemonfiber/spec/blob/main/50-governance/issue-routing.md):
+  which repository a report belongs in
+
+## Here
+
+<CardGrid>
+  <LinkCard
+    title="Taking part"
+    href="/community/how-change-gets-in/"
+    description="The organisation's contributor guide, its code of conduct, where to ask, and how to report a vulnerability."
+  />
+  <LinkCard
+    title="The repositories"
+    href="/repos/lemonfiber/"
+    description="Each repository's own front door: what it is, and how to build and test it."
+  />
+  <LinkCard
+    title="How the core is built"
+    href="/architecture/"
+    description="The architecture notes to read before touching the Rust workspace."
+  />
+  <LinkCard
+    title="The brand"
+    href="/brand/colour/"
+    description="Colour, type and the marks, and the rules for using them."
+  />
+</CardGrid>
