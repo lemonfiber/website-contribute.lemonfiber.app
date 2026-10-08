@@ -5,8 +5,7 @@ built and tested, how the core is put together, and the brand. It is for a
 person or an agent changing the code. Running lemonfiber, or building on its
 API, is on [the documentation site](https://docs.lemonfiber.app).
 
-`deploy.yml` publishes it to GitHub Pages under the domain
-`contribute.lemonfiber.app`.
+Published at [contribute.lemonfiber.app](https://contribute.lemonfiber.app).
 
 ## What it is
 
