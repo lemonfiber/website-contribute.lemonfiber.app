@@ -6,7 +6,10 @@ import { fileURLToPath } from "node:url";
 
 import manifest from "../mirrors.json";
 import type { Mirror } from "@lemonfiber/website-kit/mirror";
-import { mirrorLoader } from "@lemonfiber/website-kit/mirror-loader";
+import {
+  mirrorLoader,
+  provenanceSchema,
+} from "@lemonfiber/website-kit/mirror-loader";
 
 const mirrors = manifest.mirrors as readonly Mirror[];
 const root = fileURLToPath(new URL("..", import.meta.url)).replace(/\/$/, "");
@@ -35,19 +38,9 @@ const loader: Loader = {
   },
 };
 
-const provenance = z
-  .object({
-    repo: z.string(),
-    label: z.string(),
-    revision: z.string(),
-    date: z.string(),
-    source: z.string(),
-  })
-  .optional();
-
 export const collections = {
   docs: defineCollection({
     loader,
-    schema: docsSchema({ extend: z.object({ mirror: provenance }) }),
+    schema: docsSchema({ extend: z.object({ mirror: provenanceSchema }) }),
   }),
 };
