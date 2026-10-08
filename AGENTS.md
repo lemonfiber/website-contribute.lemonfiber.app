@@ -1,11 +1,11 @@
 # AGENTS.md — website-contribute.lemonfiber.app
 
-Orientation for a focused session in this repo.
-
-> **Common rules for every lemonfiber repo** live in the spec repo, at
-> [50-governance/ai-contributors.md](https://github.com/lemonfiber/spec/blob/main/50-governance/ai-contributors.md).
-> This file is the contributor-site header; the shared rules are canonical
-> there.
+> **Start at the roadmap and board on [lemonfiber.app](https://lemonfiber.app),
+> rendered from the report of where every unreleased version stands. Then the
+> rules** every repository shares:
+> [working in the repositories](https://github.com/lemonfiber/spec/blob/main/50-governance/working-in-the-repositories.md)
+> and [the rules for agents](https://github.com/lemonfiber/spec/blob/main/50-governance/ai-contributors.md).
+> This file holds only what is true of this repository.
 
 ## What this repo is
 
@@ -47,9 +47,5 @@ npm ci        # also what turns this clone's git hooks on
 npm run ci
 ```
 
-`.githooks/commit-msg` refuses a commit CI would refuse — a non-conventional
-subject, a missing sign-off, a missing `Spec:` citation, or a trailer crediting
-an assistant. The four rules are in
-[50-governance/contributing.md](https://github.com/lemonfiber/spec/blob/main/50-governance/contributing.md#what-a-commit-message-has-to-carry).
 `pins-sources` runs on every pull request and is not in `npm run ci`, because it
 fetches the repositories this site pins and a build may not reach the network.
