@@ -12,7 +12,7 @@
 #           hygiene / {actionlint, invite, lines, links, markdown, pins,
 #           shared-files, typos}, security / {gitleaks, osv-scanner}
 #   gate    gate
-#   sonar   gate / gate
+#   sonar   sonar, gate / gate
 #   codeql  analyze (actions), analyze (javascript-typescript), alerts / alerts
 #   pins    pins-sources
 #
@@ -20,7 +20,9 @@
 # rather than by a workflow, so it cannot be waited for by name; `sonar`'s
 # `gate / gate` reads that summary and cannot succeed before it exists. `gate`
 # and `gate / gate` are different checks: `gate` is this repository's own, and
-# `gate / gate` is the shared SonarCloud issue gate `sonar` calls.
+# `gate / gate` is the shared SonarCloud issue gate `sonar` calls. The `sonar`
+# job is the scan itself; the issue gate runs whatever the scan did, so it alone
+# would pass a scan that failed.
 #
 # Add a workflow to branch protection and it belongs here in the same change.
 name: awaiting-maintainer
