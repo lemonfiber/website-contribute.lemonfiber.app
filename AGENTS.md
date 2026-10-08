@@ -9,8 +9,8 @@ Orientation for a focused session in this repo.
 
 ## What this repo is
 
-The contributor site, published at
-[contribute.lemonfiber.app](https://contribute.lemonfiber.app). An Astro
+The contributor site, deployed to GitHub Pages under the domain
+`contribute.lemonfiber.app`. An Astro
 Starlight site whose pages, apart from the landing page, are other repositories'
 own files: pinned git submodules under `vendor/`, reached through symlinks under
 `src/content/docs/`. `README.md` is the long version; the spec page for this

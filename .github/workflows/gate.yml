@@ -38,5 +38,7 @@ jobs:
       - name: Install the browser the accessibility sweep drives
         run: npm run browser
 
+      # `--ignore-scripts` skips npm's `preci` and `postci` hooks, of which
+      # there are none; the scripts the gate names still run.
       - name: Run the gate
-        run: npm run ci
+        run: npm run ci --ignore-scripts
