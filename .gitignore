@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.astro/
+*.tsbuildinfo
+.DS_Store
+src/paraglide/
+playwright-report/
+test-results/

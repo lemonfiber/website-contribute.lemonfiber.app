@@ -1,0 +1,19 @@
+# A site route is not a source path: `/start/what-lemonfiber-is/` is a page the
+# build produces, not a file in the checkout. The root directory lets lychee
+# resolve such a link far enough to recognise it as local; the exclusion then
+# leaves it to starlight-links-validator, which resolves routes against the real
+# route table and fails the build on any that do not. lychee checks what leaves
+# the site.
+#
+# This is the file the org-shared `hygiene` job reads, and that job checks out
+# without submodules, so the scan it configures sees this repository's own
+# markdown and none of the repositories rendered from `vendor/`. The scan
+# over the built site, which is where mirrored prose exists, is configured by
+# `lychee-site.toml` and run by the `links` workflow.
+root_dir = "/home/runner/work/website-contribute.lemonfiber.app/website-contribute.lemonfiber.app"
+exclude = ["^file:"]
+exclude_loopback = true
+max_retries = 2
+# No `accept` list here: the shared hygiene workflow passes `--accept` on the
+# command line, which beats a config file. The list, and why each code is
+# accepted, are in `lemonfiber/spec`'s `hygiene.yml`.

@@ -1,0 +1,134 @@
+{
+  "$comment": "Every tree this site renders but does not own. Each route under src/content/docs is a symlink into vendor/<repo>/<path>, and vendor/ is submodules pinned to exact revisions. Nothing here is fetched at build time.",
+  "mirrors": [
+    {
+      "route": "architecture",
+      "repo": "lemonfiber",
+      "path": ".docs/architecture",
+      "remote": "https://github.com/lemonfiber/lemonfiber",
+      "branch": "main",
+      "label": "lemonfiber/lemonfiber",
+      "index": "00-index"
+    },
+    {
+      "route": "brand",
+      "repo": "brand",
+      "path": ".docs",
+      "remote": "https://github.com/lemonfiber/brand",
+      "branch": "main",
+      "label": "lemonfiber/brand"
+    },
+    {
+      "route": "community/how-change-gets-in.md",
+      "repo": "org",
+      "path": "CONTRIBUTING.md",
+      "remote": "https://github.com/lemonfiber/.github",
+      "branch": "main",
+      "label": "lemonfiber/.github"
+    },
+    {
+      "route": "community/conduct.md",
+      "repo": "org",
+      "path": "CODE_OF_CONDUCT.md",
+      "remote": "https://github.com/lemonfiber/.github",
+      "branch": "main",
+      "label": "lemonfiber/.github"
+    },
+    {
+      "route": "community/reporting-a-vulnerability.md",
+      "repo": "org",
+      "path": "SECURITY.md",
+      "remote": "https://github.com/lemonfiber/.github",
+      "branch": "main",
+      "label": "lemonfiber/.github"
+    },
+    {
+      "route": "community/where-to-ask.md",
+      "repo": "org",
+      "path": "SUPPORT.md",
+      "remote": "https://github.com/lemonfiber/.github",
+      "branch": "main",
+      "label": "lemonfiber/.github"
+    },
+    {
+      "route": "repos/lemonfiber.md",
+      "repo": "lemonfiber",
+      "path": "README.md",
+      "remote": "https://github.com/lemonfiber/lemonfiber",
+      "branch": "main",
+      "label": "lemonfiber/lemonfiber",
+      "title": "lemonfiber \u2014 the Rust workspace"
+    },
+    {
+      "route": "repos/media-stack.md",
+      "repo": "lemonfiber-media-stack",
+      "path": "README.md",
+      "remote": "https://github.com/lemonfiber/lemonfiber-media-stack",
+      "branch": "main",
+      "label": "lemonfiber/lemonfiber-media-stack",
+      "title": "lemonfiber-media-stack \u2014 the stack itself"
+    },
+    {
+      "route": "repos/sdk-ts.md",
+      "repo": "sdk-ts",
+      "path": "README.md",
+      "remote": "https://github.com/lemonfiber/sdk-ts",
+      "branch": "main",
+      "label": "lemonfiber/sdk-ts",
+      "title": "sdk-ts \u2014 the TypeScript client"
+    },
+    {
+      "route": "repos/sdk-php.md",
+      "repo": "sdk-php",
+      "path": "README.md",
+      "remote": "https://github.com/lemonfiber/sdk-php",
+      "branch": "main",
+      "label": "lemonfiber/sdk-php",
+      "title": "sdk-php \u2014 the PHP client"
+    },
+    {
+      "route": "repos/sdk-python.md",
+      "repo": "sdk-python",
+      "path": "README.md",
+      "remote": "https://github.com/lemonfiber/sdk-python",
+      "branch": "main",
+      "label": "lemonfiber/sdk-python"
+    },
+    {
+      "route": "repos/web.md",
+      "repo": "lemonfiber-web",
+      "path": "README.md",
+      "remote": "https://github.com/lemonfiber/lemonfiber-web",
+      "branch": "main",
+      "label": "lemonfiber/lemonfiber-web",
+      "title": "lemonfiber-web \u2014 the web surface"
+    },
+    {
+      "route": "repos/companion.md",
+      "repo": "lemonfiber-companion",
+      "path": "README.md",
+      "remote": "https://github.com/lemonfiber/lemonfiber-companion",
+      "branch": "main",
+      "label": "lemonfiber/lemonfiber-companion",
+      "title": "lemonfiber-companion \u2014 the phone surface"
+    },
+    {
+      "route": "repos/brand.md",
+      "repo": "brand",
+      "path": "README.md",
+      "remote": "https://github.com/lemonfiber/brand",
+      "branch": "main",
+      "label": "lemonfiber/brand",
+      "title": "brand \u2014 the tokens and the marks"
+    },
+    {
+      "route": "repos/homebrew-tap.md",
+      "repo": "homebrew-tap",
+      "path": "README.md",
+      "remote": "https://github.com/lemonfiber/homebrew-tap",
+      "branch": "main",
+      "label": "lemonfiber/homebrew-tap",
+      "title": "homebrew-tap \u2014 the formula"
+    }
+  ]
+}

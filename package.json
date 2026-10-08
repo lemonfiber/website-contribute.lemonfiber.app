@@ -1,0 +1,59 @@
+{
+  "name": "@lemonfiber/website-contribute",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "The lemonfiber contributor site: a renderer over the repositories' own guides, for a person or an agent changing the code.",
+  "license": "SEE LICENSE IN LICENSE",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lemonfiber/website-contribute.lemonfiber.app.git"
+  },
+  "engines": {
+    "node": ">=26"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "messages": "paraglide-js compile --project ./project.inlang --outdir ./src/paraglide",
+    "sync": "astro sync",
+    "types": "astro check --minimumFailingSeverity hint",
+    "lint": "eslint . --max-warnings 0",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "guard": "node scripts/guards.ts",
+    "links": "node scripts/links.ts",
+    "ci": "npm run messages && npm run sync && npm run format:check && npm run lint && npm run types && npm run guard && npm run build && npm run links && npm run a11y",
+    "a11y": "node scripts/a11y.ts",
+    "browser": "playwright install --with-deps chromium",
+    "prepare": "git config core.hooksPath .githooks"
+  },
+  "dependencies": {
+    "@lemonfiber/brand": "github:lemonfiber/brand#de09092889d6153f5f88a73fb558fdede9fd0464",
+    "@lemonfiber/website-kit": "github:lemonfiber/website-kit#4431170e61a51728aa9d861dd39fd6b1e7d0825b"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.10",
+    "@astrojs/starlight": "^0.42.5",
+    "@axe-core/playwright": "^4.13.0",
+    "@eslint/js": "^10.0.1",
+    "@inlang/paraglide-js": "^2.25.4",
+    "@inlang/plugin-message-format": "^4.4.4",
+    "@playwright/test": "^1.63.0",
+    "astro": "^7.3.5",
+    "eslint": "^10.12.0",
+    "eslint-plugin-astro": "^3.2.1",
+    "globals": "^17.13.0",
+    "prettier": "^3.9.9",
+    "prettier-plugin-astro": "^1.1.0",
+    "starlight-links-validator": "^0.26.0",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.71.0"
+  },
+  "overrides": {
+    "postcss-nested": {
+      "postcss-selector-parser": "^7.1.6"
+    }
+  }
+}
