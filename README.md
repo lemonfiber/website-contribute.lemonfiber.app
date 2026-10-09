@@ -6,6 +6,10 @@ person or an agent changing the code. Running lemonfiber, or building on its
 API, is on [the documentation site](https://docs.lemonfiber.app).
 
 Published at [contribute.lemonfiber.app](https://contribute.lemonfiber.app).
+`deploy.yml` publishes the build to Cloudflare, as the assets-only Worker
+`wrangler.jsonc` declares, and to GitHub Pages while the domain still points
+there. The headers the host sends with every page come from the `_headers` file
+the build writes at its root, and the Playwright suite holds the build to them.
 
 ## What it is
 
