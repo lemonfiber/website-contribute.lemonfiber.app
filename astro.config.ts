@@ -1,4 +1,8 @@
+import { satteri } from "@astrojs/markdown-satteri";
 import starlight from "@astrojs/starlight";
+import { BRAND_LOGO } from "@lemonfiber/website-kit/brand";
+import { sitePolicy } from "@lemonfiber/website-kit/csp";
+import { scrollableTables } from "@lemonfiber/website-kit/tables";
 import { defineConfig } from "astro/config";
 import { paraglideVitePlugin } from "@inlang/paraglide-js";
 import starlightLinksValidator from "starlight-links-validator";
@@ -8,6 +12,10 @@ import { sections } from "./src/lib/sections";
 export default defineConfig({
   site: "https://contribute.lemonfiber.app",
   trailingSlash: "always",
+  // A table wider than the page scrolls inside a region the keyboard can reach.
+  markdown: {
+    processor: satteri({ hastPlugins: [scrollableTables({ label: "Table" })] }),
+  },
   vite: {
     plugins: [
       paraglideVitePlugin({
@@ -19,6 +27,7 @@ export default defineConfig({
   integrations: [
     starlight({
       title: "lemonfiber",
+      logo: BRAND_LOGO,
       description:
         "How lemonfiber is built and run: taking part, the repositories, the core's architecture and the brand.",
       defaultLocale: "en",
@@ -60,5 +69,7 @@ export default defineConfig({
         }),
       ],
     }),
+    // Last, so each page's policy hashes the inline blocks it ships with.
+    sitePolicy(),
   ],
 });
