@@ -1,4 +1,5 @@
 import AxeBuilder from "@axe-core/playwright";
+import { layoutViolations, probeLayout } from "@lemonfiber/website-kit/layout";
 import { expect, test } from "@playwright/test";
 
 /**
@@ -37,8 +38,20 @@ for (const route of routes)
       );
 
       const results = await new AxeBuilder({ page })
-        .withTags(["wcag2a", "wcag2aa", "wcag21a", "wcag21aa"])
+        .withTags(["wcag2a", "wcag2aa", "wcag21a", "wcag21aa", "wcag22aa"])
         .analyze();
 
       expect(results.violations).toEqual([]);
     });
+
+/** The narrowest screen the site is laid out for. */
+const PHONE = { width: 375, height: 800 };
+
+for (const route of routes)
+  test(`${route} fits a phone's width`, async ({ page }) => {
+    await page.setViewportSize(PHONE);
+    await page.goto(route);
+    expect(layoutViolations(route, await page.evaluate(probeLayout))).toEqual(
+      [],
+    );
+  });
