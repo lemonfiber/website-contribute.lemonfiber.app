@@ -42,7 +42,7 @@
     "@inlang/paraglide-js": "^2.25.4",
     "@inlang/plugin-message-format": "^4.4.4",
     "@playwright/test": "^1.63.0",
-    "astro": "^7.3.5",
+    "astro": "^7.3.6",
     "eslint": "^10.12.0",
     "eslint-plugin-astro": "^3.2.1",
     "globals": "^17.13.0",
@@ -50,7 +50,7 @@
     "prettier-plugin-astro": "^1.1.0",
     "starlight-links-validator": "^0.26.0",
     "typescript": "^6.0.3",
-    "typescript-eslint": "^8.71.0"
+    "typescript-eslint": "^8.71.1"
   },
   "overrides": {
     "postcss-nested": {
