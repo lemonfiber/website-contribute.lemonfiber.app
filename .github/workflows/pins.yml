@@ -48,6 +48,7 @@ jobs:
   age:
     if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     outputs:
       red: ${{ steps.report.outputs.red }}
     steps:
@@ -261,6 +262,7 @@ jobs:
     # The name the default branch requires it by.
     name: pins-sources
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     outputs:
       red: ${{ steps.report.outputs.red }}
     steps:
@@ -322,6 +324,7 @@ jobs:
     needs: [age, sources]
     if: always() && github.event_name != 'pull_request'
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     outputs:
       red: ${{ steps.compose.outputs.red }}
       body: ${{ steps.compose.outputs.body }}
