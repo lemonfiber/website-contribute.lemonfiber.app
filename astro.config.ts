@@ -2,6 +2,7 @@ import { satteri } from "@astrojs/markdown-satteri";
 import starlight from "@astrojs/starlight";
 import { BRAND_LOGO } from "@lemonfiber/website-kit/brand";
 import { sitePolicy } from "@lemonfiber/website-kit/csp";
+import { searchNamedByItsLabel } from "@lemonfiber/website-kit/search";
 import { scrollableTables } from "@lemonfiber/website-kit/tables";
 import { defineConfig } from "astro/config";
 import { paraglideVitePlugin } from "@inlang/paraglide-js";
@@ -70,6 +71,7 @@ export default defineConfig({
       ],
     }),
     // Last, so each page's policy hashes the inline blocks it ships with.
+    searchNamedByItsLabel(),
     sitePolicy(),
   ],
 });
