@@ -30,8 +30,8 @@
     "prepare": "git config core.hooksPath .githooks"
   },
   "dependencies": {
-    "@lemonfiber/brand": "github:lemonfiber/brand#2524369f4cc9c5bd7e138f5498e9f445d0ca8a96",
-    "@lemonfiber/website-kit": "github:lemonfiber/website-kit#e7ab671e11629e4ec0f43c8919f27e0b1e5a0cce"
+    "@lemonfiber/brand": "github:lemonfiber/brand#139e00809a210031c2deb1ee43b3eab43d77c9f1",
+    "@lemonfiber/website-kit": "github:lemonfiber/website-kit#3d22e70be150d081d9886c221b13d31b88d4d1e9"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.12",
@@ -55,6 +55,7 @@
   "overrides": {
     "postcss-nested": {
       "postcss-selector-parser": "^7.1.6"
-    }
+    },
+    "minimatch": "^11.0.3"
   }
 }
