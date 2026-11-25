@@ -60,15 +60,6 @@
       "title": "lemonfiber \u2014 the Rust workspace"
     },
     {
-      "route": "repos/media-stack.md",
-      "repo": "lemonfiber-media-stack",
-      "path": "README.md",
-      "remote": "https://github.com/lemonfiber/lemonfiber-media-stack",
-      "branch": "main",
-      "label": "lemonfiber/lemonfiber-media-stack",
-      "title": "lemonfiber-media-stack \u2014 the stack itself"
-    },
-    {
       "route": "repos/sdk-ts.md",
       "repo": "sdk-ts",
       "path": "README.md",
